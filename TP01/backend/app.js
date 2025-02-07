@@ -7,7 +7,7 @@ const path = require("path"); // C'est pour inclure le module path de Node.js
 // Ajoute un middleware qui retourne les documents statiques situés sous le dossier /public.
 // NB : il faut le mettre avant tout autres use qui modifie res 
 // pour que le cas des fichiers static soit bien traité en 1er dans la chaine des middlewares.
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'public/pages')));
 
 
 // Middleware global pour gérer toutes les requêtes

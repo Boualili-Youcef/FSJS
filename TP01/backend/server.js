@@ -11,5 +11,5 @@ const app = require('./app'); // inclusion d'Express
 const server = http.createServer(app);
 
 server.listen(port,  ()=>{
-    console.log(`Le server écoute sur http://0.0.0.0:${port}/`);
+    console.log(`Le server écoute sur http://192.168.154.53:${port}/`);
 })
