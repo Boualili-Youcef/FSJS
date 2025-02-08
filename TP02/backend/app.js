@@ -19,16 +19,16 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.render('pages/home')
+  res.render("pages/home");
 });
 
 app.get("/about", (req, res) => {
-  res.send("<h1>I'm jacking it</h1>");
+  res.render("pages/about");
 });
 
 app.get("*", (req, res) => {
   //res.send("<h1>Nothing to see here.... NO it's finne finning it</h1>");
-  res.redirect("/");    
+  res.redirect("/");
 });
 
 module.exports = app;
