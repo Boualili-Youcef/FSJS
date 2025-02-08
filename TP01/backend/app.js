@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, 'views')); // Déclaration du dossier cont
 
 // Middleware global pour gérer toutes les requêtes
 app.use((req, res, next) => {
-  res.render('pages/home', {user: "Jesse Pinkman"});
+  res.render('pages/home', {nickname: "White", sex: "male"} );
 });
 
 // app.use((req, res, next) => {

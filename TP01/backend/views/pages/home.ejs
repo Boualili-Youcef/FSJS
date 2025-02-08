@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Breaking Bad</title>
     <!--Référence au fichier statique main.css-->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <h1>YOO mister White !!!</h1>
 
-</head>
-<body>
+    <h1>You want to cook crystal meth ?</h1>
 
-<h1>YOO mister White !!!</h1>
-
-<h1>You want to cook crystal meth ?</h1>
-
-<h1>
-    <% if(typeof user !== 'undefined'){ %>
-        Welcome <%= user %>
-    <% } else { %>
-        Shit it's Gustavo !!!
-    <% } %>
-</h1>
-</body>
+    <h1>
+      <% if(typeof nickname === 'undefined'){%> 
+        <% if (typeof sex === 'undefined'){ %>
+             Bonjour bel(le) inconnu(e)
+        <% } else if ( sex === 'male') { %>
+            Bonjour bel inconnu
+        <% } else{ %>
+            Bonjour belle inconnue 
+        <% } %>
+     <% } else { %>
+        <% if ( typeof sex === 'undefined'){ %>
+            Bonjour <%= nickname %>
+       <% } else if (sex === 'male') { %>
+           Bonjour Mr <%= nickname %>
+       <% } else{ %>
+           Bonjour Mme <%= nickname%>
+        <% } %>
+     <% } %>
+    </h1>
+  </body>
 </html>
