@@ -1,3 +1,4 @@
+<%- include('../partials/head') %>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -12,23 +13,26 @@
     <h1>You want to cook crystal meth ?</h1>
 
     <h1>
-      <% if(typeof nickname === 'undefined'){%> 
-        <% if (typeof sex === 'undefined'){ %>
+      <% if(typeof user.nickname === 'undefined'){%> 
+        <% if (typeof user.sex === 'undefined'){ %>
              Bonjour bel(le) inconnu(e)
-        <% } else if ( sex === 'male') { %>
+        <% } else if ( user.sex === 'male') { %>
             Bonjour bel inconnu
         <% } else{ %>
             Bonjour belle inconnue 
         <% } %>
      <% } else { %>
-        <% if ( typeof sex === 'undefined'){ %>
-            Bonjour <%= nickname %>
-       <% } else if (sex === 'male') { %>
-           Bonjour Mr <%= nickname %>
+        <% if ( typeof user.sex === 'undefined'){ %>
+            Bonjour <%= user.nickname %>
+       <% } else if (user.sex === 'male') { %>
+           Bonjou Mr <%= user.nickname %>
        <% } else{ %>
-           Bonjour Mme <%= nickname%>
+           Bonjour Mme <%= user.nickname%>
         <% } %>
      <% } %>
     </h1>
   </body>
 </html>
+
+<%- include('../partials/foot') %>
+

@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "sync": "browser-sync start --proxy 'localhost:4000' --files 'views/**/*.ejs, public/css/**/*.css'"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +15,8 @@
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3"
   }
 }
