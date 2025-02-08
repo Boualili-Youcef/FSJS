@@ -10,6 +10,20 @@ const app = require('./app'); // inclusion d'Express
 // mise en oeuvre : on délègue la gestion des requêtes à Express
 const server = http.createServer(app);
 
-server.listen(port,  ()=>{
-    console.log(`Le server écoute sur http://192.168.154.53:${port}/`);
-})
+const os = require('os');
+
+function getLocalIP() {
+    const interfaces = os.networkInterfaces();
+    for (const name of Object.keys(interfaces)) {
+        for (const iface of interfaces[name]) {
+            if (iface.family === 'IPv4' && !iface.internal) {
+                return iface.address;
+            }
+        }
+    }
+    return 'localhost';
+}
+
+server.listen(port, ()=> {
+    console.log(`Le serveur écoute sur http://${getLocalIP()}:${port}/`);
+});
