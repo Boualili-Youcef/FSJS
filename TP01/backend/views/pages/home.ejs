@@ -1,38 +1,21 @@
-<%- include('../partials/head') %>
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Breaking Bad</title>
-    <!--Référence au fichier statique main.css-->
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <h1>YOO mister White !!!</h1>
-
-    <h1>You want to cook crystal meth ?</h1>
-
-    <h1>
-      <% if(typeof user.nickname === 'undefined'){%> 
-        <% if (typeof user.sex === 'undefined'){ %>
-             Bonjour bel(le) inconnu(e)
-        <% } else if ( user.sex === 'male') { %>
+<h1>YOO mister White !!!</h1>
+<h1>You want to cook crystal meth ?</h1>
+<h1>
+    <% if (typeof user.nickname === 'undefined') { %> 
+        <% if (typeof user.sex === 'undefined') { %>
+            Bonjour bel(le) inconnu(e)
+        <% } else if (user.sex === 'male') { %>
             Bonjour bel inconnu
-        <% } else{ %>
+        <% } else { %>
             Bonjour belle inconnue 
         <% } %>
-     <% } else { %>
-        <% if ( typeof user.sex === 'undefined'){ %>
+    <% } else { %>
+        <% if (typeof user.sex === 'undefined') { %>
             Bonjour <%= user.nickname %>
-       <% } else if (user.sex === 'male') { %>
-           Bonjou Mr <%= user.nickname %>
-       <% } else{ %>
-           Bonjour Mme <%= user.nickname%>
+        <% } else if (user.sex === 'male') { %>
+            Bonjour Mr <%= user.nickname %>
+        <% } else { %>
+            Bonjour Mme <%= user.nickname %>
         <% } %>
-     <% } %>
-    </h1>
-  </body>
-</html>
-
-<%- include('../partials/foot') %>
-
+    <% } %>
+</h1>
