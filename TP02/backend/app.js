@@ -18,17 +18,15 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
-  res.render("pages/home");
-});
+const routerAcceuil = require("./router/routerAcceuil");
+app.use("/", routerAcceuil);
 
-app.get("/about", (req, res) => {
-  res.render("pages/about");
-});
+const routerAbout = require("./router/routerAbout");
+app.use("/about", routerAbout);
 
-app.get("*", (req, res) => {
-  //res.send("<h1>Nothing to see here.... NO it's finne finning it</h1>");
-  res.redirect("/");
+// Ajoutez ceci à la fin de vos routes existantes
+app.use((req, res, next) => {
+  res.status(404).render("pages/404", { page: "404" });
 });
 
 module.exports = app;
