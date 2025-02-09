@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   height: 100%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: cursive;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 
 header {
   width: 100%;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,22 +26,23 @@ header h1 {
 }
 
 header nav {
-  background-color: rgb(53, 57, 62);
+  background-color: none;
   border-radius: 3px;
 
   display: flex;
+  gap: 0.5em;
   margin-right: 0.5em;
 }
 
 header nav a {
   height: 100%;
   display: inline-block;
-  padding: 10px;
+  padding: 10px 15px;
   margin: 0;
   border: none;
   color: white;
   font-weight: 550;
-  background-color: transparent;
+  background-color: rgb(53, 57, 62);
   border-radius: 3px;
   text-decoration: none;
 }
@@ -53,7 +54,12 @@ header nav button:hover {
 .content {
   width: 100%;
   flex: 1;
+  font-size: 1.5em;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .content .jokes {
@@ -67,6 +73,17 @@ header nav button:hover {
 
 .content .jokes .joke {
   display: flex;
+  align-items: center;
+  border: 1px none rgb(0, 0, 0);
+  width: 80%;
+  border-radius: 5px;
+  background-color: rgb(177, 173, 173);
+  box-shadow: 5px 5px 3px rgb(98, 98, 98);
+}
+
+.content .randomjokes {
+  display: flex;
+  justify-content: center;
   align-items: center;
   border: 1px none rgb(0, 0, 0);
   padding: 7px;

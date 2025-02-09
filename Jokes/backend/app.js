@@ -14,4 +14,7 @@ app.set("layout","layouts/layout");
 const allRouter = require('./routes/allRouter');
 app.use('/', allRouter);
 
+const randomRouter = require('./routes/randomRouter');
+app.use('/', randomRouter);
+
 module.exports = app;
