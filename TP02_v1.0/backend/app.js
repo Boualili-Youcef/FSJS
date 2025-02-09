@@ -10,9 +10,9 @@ app.set("view engine", "ejs"); // npm install --save ejs
 app.set("views", path.join(__dirname, "views"));
 
 // layout
-const expressLayouts = require("express-ejs-layouts"); //npm install express-ejs-layouts
+const expressLayouts = require("express-ejs-layouts"); // npm install express-ejs-layouts
 app.use(expressLayouts);
-app.set("layout", "../views/layouts/layout"); // définit le layout par défaut
+app.set("layout", "layouts/layout"); // définit le layout par défaut
 
 // Routage
 const homeRouter = require("./routes/homeRouter");

@@ -1,24 +1,24 @@
 const express = require('express');
 const router = express.Router();
 
-router.get("/",(req, res)=>{
-    res.send('<h1>Enseignement</h1>');
+router.get("/", (req, res) => {
+    res.render('teaching/index', { title: 'Enseignement' });
 });
 
 router.get('/javascript', (req, res) => {
-    res.send('<h1>Cours de JavaScript</h1>') ;
+    res.render('teaching/javascript', { title: 'Cours de JavaScript' });
 });
 
 router.get('/php', (req, res) => {
-    res.send('<h1>Cours de PHP</h1>') ;
+    res.render('teaching/php', { title: 'Cours de PHP' });
 });
 
 router.get('/node', (req, res) => {
-    res.send('<h1>Introduction à Node.js</h1>') ;
+    res.render('teaching/node/node', { title: 'Introduction à Node.js' });
 });
 
 router.get('/node/express', (req, res) => {
-    res.send('<h1>Cours sur le framework Express</h1>') ;
+    res.render('teaching/node/express', { title: 'Cours sur le framework Express' });
 });
 
 module.exports = router;
