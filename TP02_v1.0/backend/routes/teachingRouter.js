@@ -6,19 +6,19 @@ router.get("/", (req, res) => {
 });
 
 router.get('/javascript', (req, res) => {
-    res.render('teaching/javascript', { title: 'Cours de JavaScript' });
+    res.render('teaching/javascript', { title: 'JavaScript' });
 });
 
 router.get('/php', (req, res) => {
-    res.render('teaching/php', { title: 'Cours de PHP' });
+    res.render('teaching/php', { title: 'PHP' });
 });
 
 router.get('/node', (req, res) => {
-    res.render('teaching/node/node', { title: 'Introduction à Node.js' });
+    res.render('teaching/node/node', { title: 'Node.js' });
 });
 
 router.get('/node/express', (req, res) => {
-    res.render('teaching/node/express', { title: 'Cours sur le framework Express' });
+    res.render('teaching/node/express', { title: 'Express' });
 });
 
 module.exports = router;
