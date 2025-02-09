@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    res.render('reasearch/reasearch', { title: 'Recherche' });
-});
+const reasearchController = require('../controllers/reasearchController');
+
+router.get("/", reasearchController.reasearch);
 
 module.exports = router;

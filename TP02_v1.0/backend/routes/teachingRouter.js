@@ -1,24 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    res.render('teaching/index', { title: 'Enseignement' });
-});
+const teachingController = require('../controllers/teachingController');
 
-router.get('/javascript', (req, res) => {
-    res.render('teaching/javascript', { title: 'JavaScript' });
-});
+router.get("/", teachingController.teaching);
 
-router.get('/php', (req, res) => {
-    res.render('teaching/php', { title: 'PHP' });
-});
+router.get('/javascript', teachingController.javascript);
 
-router.get('/node', (req, res) => {
-    res.render('teaching/node/node', { title: 'Node.js' });
-});
+router.get('/php', teachingController.php);
 
-router.get('/node/express', (req, res) => {
-    res.render('teaching/node/express', { title: 'Express' });
-});
+router.get('/node', teachingController.node);
+
+router.get('/node/express', teachingController.express);
 
 module.exports = router;
