@@ -1,3 +1,6 @@
-module.exports.home = (req, res) => {  
-    res.render('pages/home', {id_value : req.params.id});
+module.exports.home = (req, res, next) => {  
+    const id_value = req.params.id || null; 
+    const query = req.query;  
+
+    res.render('pages/home', { id_value, query });
 };

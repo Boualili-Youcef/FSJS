@@ -1,5 +1,13 @@
-<h1>YOO mister White !!!</h1>
+<h1>YOO Mister White !!!</h1>
 <h1>You want to cook crystal meth ?</h1>
-<h1>
-    hi <%= id_value %>
-</h1>
+
+<% if (id_value) { %>
+    <p>Votre ID est : <%= id_value %></p>
+<% } %>
+
+<h1>Liste des données GET reçues</h1>
+<ul>
+    <% if (query.day) { %><li>Day: <%= query.day %></li><% } %>
+    <% if (query.month) { %><li>Month: <%= query.month %></li><% } %>
+    <% if (query.year) { %><li>Year: <%= query.year %></li><% } %>
+</ul>
