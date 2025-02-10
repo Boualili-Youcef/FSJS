@@ -18,9 +18,17 @@ app.use(expressLayouts); // Utilisation du module express-ejs-layouts
 
 app.set('layout', 'layouts/layout'); // Définition du layout par défaut
 
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // Middleware global pour gérer toutes les requêtes
 const homeRouter = require('./routes/homeRouter');
 app.use('/', homeRouter);
+
+const formRouter = require('./routes/formRouter');
+app.use('/form', formRouter);
+
 
 // app.use((req, res, next) => {
 //   res.sendFile(path.join(__dirname, "public/pages/index.html"));

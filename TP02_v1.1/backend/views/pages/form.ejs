@@ -1,0 +1,27 @@
+<% if (typeof data === 'undefined') { %>
+<h2 class="mb-4">Formulaire d'inscription</h2>
+
+<form action="/form" method="POST" class="p-4 border rounded bg-light">
+  <div class="mb-3">
+    <label for="prenom" class="form-label">Prénom</label>
+    <input
+      type="text"
+      class="form-control"
+      id="prenom"
+      name="prenom"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="nom" class="form-label">Nom</label>
+    <input type="text" class="form-control" id="nom" name="nom" required />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>
+<% } %> <% if (typeof data !== 'undefined') { %>
+<h3>Informations soumises :</h3>
+<p>Prénom : <%= data.prenom %></p>
+<p>Nom : <%= data.nom %></p>
+<% } %>
