@@ -1,5 +1,5 @@
 <div class="jokes">
   <% jokes.forEach(joke => { %>
-  <div class="joke"><%= joke.joke %></div>
+    <a href="/jokes/joke/<%= joke.id %>" class="joke"><%= joke.joke %></a>
   <% }); %>
 </div>

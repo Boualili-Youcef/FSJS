@@ -17,4 +17,7 @@ app.use('/', allRouter);
 const randomRouter = require('./routes/randomRouter');
 app.use('/', randomRouter);
 
+const jokeRouter = require('./routes/jokeRouter');
+app.use('/', jokeRouter);
+
 module.exports = app;
