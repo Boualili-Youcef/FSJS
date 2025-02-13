@@ -1,0 +1,46 @@
+<% if(typeof message === 'undefined' ) {%>
+<div class="formulaire">
+  <form action="" method="POST">
+    <h1>PLEASE LOGIN</h1>
+    <div class="inputs">
+      <input
+        class="username"
+        type="text"
+        name="username"
+        placeholder="USERNAME"
+      />
+      <input
+        class="password"
+        type="password"
+        name="password"
+        placeholder="PASSWORD"
+      />
+      <button class="button" type="submit">LOGIN</button>
+    </div>
+  </form>
+</div>
+<% }else if (state === 'failed') { %>
+<div class="alert"><%= message %></div>
+<div class="formulaire">
+  <form action="" method="POST">
+    <h1>PLEASE LOGIN</h1>
+    <div class="inputs">
+      <input
+        class="username"
+        type="text"
+        name="username"
+        placeholder="USERNAME"
+      />
+      <input
+        class="password"
+        type="password"
+        name="password"
+        placeholder="PASSWORD"
+      />
+      <button class="button" type="submit">LOGIN</button>
+    </div>
+  </form>
+</div>
+<% }else{ %>
+<div class="welcome"><%= message %></div>
+<% } %>
