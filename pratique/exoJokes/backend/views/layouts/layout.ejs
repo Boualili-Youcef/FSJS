@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <% if (typeof title !== "undefined") { %>
+    <title><%= title %></title>
+    <% } else { %>
+    <title>Dad's Jokes</title>
+    <% } %>
+</head>
+<body>
+    <%- include("../partials/head") %>
+
+    <div class="container">
+        <%- body %>
+    </div>
+    <%- include("../partials/foot") %>
+</body>
+</html>
