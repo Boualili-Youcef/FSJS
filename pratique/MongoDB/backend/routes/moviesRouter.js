@@ -5,4 +5,4 @@ const moviesController = require("../controllers/moviesController");
 
 router.get("/", moviesController.list);
 
-module.exports = router; // a voir
+module.exports = router; // Export router
