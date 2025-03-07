@@ -2,8 +2,9 @@ const express = require("express");
 const app = express();
 
 // dossier public (pour le css, etc.)
+
 const path = require("path");
-app.use(express.static(path.join(__dirname, "public")));
+//app.use(express.static(path.join(__dirname, "public")));
 
 // définition du view engine
 app.set("view engine", "ejs"); // npm install --save ejs

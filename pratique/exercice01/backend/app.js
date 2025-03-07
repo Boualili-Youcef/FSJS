@@ -14,8 +14,8 @@ app.use(expressLayout);
 
 app.set('layout', '../views/layouts/layout');
 
-app.use((req, res) => {
-  res.render('pages/home.ejs')
-});
+const moviesRouter = require('./routes/moviesRouter');
+app.use('/', moviesRouter);
+
 
 module.exports = app;
