@@ -59,7 +59,7 @@ module.exports.update = async (req, res) => {
 
 module.exports.delete = async (req, res) => {
   try {
-    const movie = await Movie.findOneAndDelete({ title: "House" });
+    const movie = await Movie.findOneAndDelete({ title: "New House" });
     console.log(movie);
     res.redirect("/movies");
   } catch (error) {

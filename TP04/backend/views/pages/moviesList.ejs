@@ -1,0 +1,12 @@
+<div class="movies">
+  <% movies.forEach(movie=>{ %>
+  <div class="vignette">
+    <div class="image">
+      <img src="<%= movie.image %>" alt="<%= movie.title %>" />
+    </div>
+    <div class="title"><%= movie.title %></div>
+    <a href="/movies/id/<%= movie.id %>" class="more">more</a>
+  </div>
+
+  <% }) %>
+</div>

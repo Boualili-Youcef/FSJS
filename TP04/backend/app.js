@@ -4,7 +4,7 @@ const app = express();
 const path = require("path");
 
 // Require the database connection
-//require("./controllers/database");
+require("./controllers/database");
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -18,8 +18,10 @@ app.use(expressLayout);
 app.set("layout", "../views/layouts/layout");
 
 
-// TODO : modify the router
 const moviesRouter = require("./routes/moviesRouter");
 app.use("/", moviesRouter);
+
+const listRouter = require("./routes/listRouter");
+app.use("/movies", listRouter);
 
 module.exports = app;
