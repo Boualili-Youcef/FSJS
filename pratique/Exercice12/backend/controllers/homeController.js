@@ -1,4 +1,4 @@
 module.exports.home = (req, res) => {
-    res.render("pages/home");
+    res.redirect("/movies");
 }
   

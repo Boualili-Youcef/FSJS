@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 html,
 body {
   margin: 0;
   font-family: "Poppins", serif;
   height: 100%;
+  overflow-x: hidden; /* Empêche le débordement horizontal */
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
 }
 
 header {
@@ -19,6 +19,7 @@ header {
   align-items: center;
   width: 100%;
   background-color: aquamarine;
+  padding: 10px 0; /* Ajoute un peu d'espace vertical */
 }
 
 header h1 {
@@ -48,8 +49,15 @@ header a:hover {
 }
 
 .container {
-  flex: 1;
+  flex: 1; /* Permet à .container de prendre tout l'espace disponible */
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Assure que le container prend toute la largeur */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+  height: 80vh; /* Ajuste selon le besoin */
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .container h1 {
@@ -57,13 +65,35 @@ header a:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  
 }
 
 .container .movies {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  align-items: center;
+  width: 95%;
+}
+
+.container .movies li {
+  display: flex;
+  justify-content: space-between; /* Répartit les éléments sur toute la ligne */
+  width: 100%; /* Utiliser toute la largeur du parent */
+  overflow: hidden;
+  gap: 3em;
+}
+
+.container .movies li .title {
+  font-weight: bold;
+  min-width: 200px;
+  white-space: nowrap;
+}
+
+.container .movies li .synopsis {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 1em;
+  text-overflow: ellipsis;
 }
 
 footer {
@@ -72,7 +102,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: White;
+  color: white;
   font-weight: bolder;
   background-color: aquamarine;
+  margin-top: auto; /* Pousse le footer vers le bas */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
 }
