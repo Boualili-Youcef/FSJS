@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html,
+body {
+  margin: 0;
+  font-family: "Poppins", serif;
+  height: 100%;
+  overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-image: url("../img/banner.webp");
+  padding: 10px 0; /* Ajoute un peu d'espace vertical */
+}
+
+header h1 {
+  padding-left: 2em;
+  color: rgb(170, 8, 8);
+}
+
+header nav {
+  display: flex;
+  margin-right: 2em;
+  border: 1px none black;
+  border-radius: 10px;
+  font-weight: bolder;
+  background-color: black;
+}
+
+header a {
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: black;
+}
+
+header a:hover {
+  background-color: rgb(68, 68, 69);
+}
+
+.content {
+  flex: 1; /* Permet à .content de prendre tout l'espace disponible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Assure que le content prend toute la largeur */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+  height: 80vh; /* Ajuste selon le besoin */
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-image: url("../img/wood.jpg");
+}
+
+.content h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+}
+
+.content .movies {
+  padding-top: 1em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  width: 95%;
+}
+
+.content .movies .vignette {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 200px;
+  gap: 1em;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.content .movies .vignette .image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.content .movies .vignette .more {
+  text-decoration: none;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: bold;
+  color: white;
+  width: min-content;
+
+  background-color: black;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+/* Ajoutez cette nouvelle règle pour les images */
+.content .movies .vignette .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.content .movies .vignette .title {
+  padding-left: 1em;
+  padding-right: 1em; /* Ajout d'un padding à droite */
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; /* Ajout de cette propriété pour masquer le texte qui dépasse */
+  max-width: 180px; /* Définir une largeur maximale qui correspond à peu près à la largeur de l'image */
+}
+.content .movies li {
+  display: flex;
+  justify-content: space-between; /* Répartit les éléments sur toute la ligne */
+  width: 100%; /* Utiliser toute la largeur du parent */
+  overflow: hidden;
+  gap: 3em;
+}
+
+.content .movies li .title {
+  font-weight: bold;
+  min-width: 200px;
+  white-space: nowrap;
+}
+
+.content .movies li .synopsis {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 1em;
+  text-overflow: ellipsis;
+}
+
+.content .movieDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+
+  gap: 1em;
+}
+
+.content .movieDetails .details {
+    margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  width: 50%;
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.content .movieDetails .details .image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.content .movieDetails .details .sorties {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content .movieDetails .details .sorties a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#red {
+    background-color: red;
+}
+.content .movieDetails .details .title {
+    font-weight: bold;
+}
+
+
+
+footer {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+  background-image: url("../img/banner.webp");
+  margin-top: auto; /* Pousse le footer vers le bas */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
