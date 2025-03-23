@@ -14,6 +14,8 @@ const expressLayout = require("express-ejs-layouts");
 app.use(expressLayout);
 
 app.set("layout", "../views/layouts/layout");
+app.use(express.urlencoded({ extended: true }));
+
 
 const moviesRouter = require("./routes/moviesRouter");
 app.use("/", moviesRouter);

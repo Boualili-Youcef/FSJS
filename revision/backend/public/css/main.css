@@ -66,7 +66,7 @@ header a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: 100%;
 }
 
@@ -163,7 +163,7 @@ header a:hover {
 }
 
 .content .movieDetails .details {
-    margin-top: 1em;
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,6 +173,13 @@ header a:hover {
   background-color: white;
   padding: 1em;
   border-radius: 10px;
+}
+
+.content .movieDetails .details span {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content .movieDetails .details .image {
@@ -193,21 +200,19 @@ header a:hover {
 }
 
 .content .movieDetails .details .sorties a {
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    padding: 5px;
-    border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 #red {
-    background-color: red;
+  background-color: red;
 }
 .content .movieDetails .details .title {
-    font-weight: bold;
+  font-weight: bold;
 }
-
-
 
 footer {
   height: 50px;
@@ -220,4 +225,24 @@ footer {
   background-image: url("../img/banner.webp");
   margin-top: auto; /* Pousse le footer vers le bas */
   box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+.content .movieDetails {
+  width: 100%;
+}
+.content .movieDetails form {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.content .movieDetails form .image_container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  border: 1px solid rgb(194, 194, 194);
+  padding: 1em;
+  border-radius: 5px;
+  gap: 1em;
 }
