@@ -1,0 +1,13 @@
+<% error = typeof error !== 'undefined' ? error : undefined ; %> <% if(error &&
+error.username) { %>
+<div class="error"><%= error.username %></div>
+<% }else if(error && error.password) { %>
+    <div class="error"><%= error.password %></div>
+<% } %>
+
+<form action="/login" method="POST">
+  <legend>Please Login</legend>
+  <input type="text" name="username" placeholder="username" />
+  <input type="password" name="password" placeholder="password" />
+  <button type="submit">Submit</button>
+</form>
