@@ -1,0 +1,11 @@
+<div class="browse">
+  <h2>Magic Cards</h2>
+  <div class="cartes">
+    <% cards.forEach((element)=>{ %>
+    <div class="carte">
+      <img src="<%=element.image_uris.small %>" alt="image" />
+      <h3 class="title"><%=element.name%></h3>
+    </div>
+    <% }) %>
+  </div>
+</div>

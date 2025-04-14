@@ -1,0 +1,12 @@
+<header>
+  <h1>Magic Store</h1>
+  <nav>
+    <% if(typeof username != "undefined"){ %>
+      <a href="/pages/browse">Shope</a>
+      <a href="/pages/login">logout</a>
+    <%}else {%>
+      <a href="/pages/browse">Browse</a>
+      <a href="/pages/login">login</a>
+    <%}%>
+  </nav>
+</header>

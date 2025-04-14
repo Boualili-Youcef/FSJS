@@ -1,0 +1,10 @@
+<% if(typeof error != "undefined"){%>
+<p><%=error%></p>
+<%} %>
+
+<form action="/pages/login" method="post">
+  <legend class="legend">Please Login</legend>
+  <input type="text" name="username" placeholder="username" />
+  <input type="password" name="password" placeholder="password" />
+  <button type="submit">submit</button>
+</form>
