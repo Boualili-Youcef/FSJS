@@ -2,3 +2,5 @@
 **package.json
 **package-lock.json
 **._.DS_Store
+**/mongodb
+**/mongodata
