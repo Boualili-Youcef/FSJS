@@ -1,0 +1,9 @@
+<div class="movies">
+  <% movies.forEach(movie=>{ %>
+  <div class="carte">
+    <img src="<%= movie.image %>"  alt="" />
+    <p class="title"><%= movie.title %></p>
+    <a href="/movies/<%= movie._id%>"><button>More</button></a>
+  </div>
+  <% }) %>
+</div>

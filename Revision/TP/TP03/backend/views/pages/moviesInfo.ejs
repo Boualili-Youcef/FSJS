@@ -1,0 +1,14 @@
+<div class="infos">
+  <div class="contol">
+    <p class="title"><%= movie.title %></p>
+    <a href="/movies">
+      <button>X</button>
+    </a>
+  </div>
+  <img src="<%= movie.image %>" alt="image" />
+  <div class="synop"><%= movie.synopsis %></div>
+  <div class="manipulation">
+    <a href="/movies/update/<%=movie._id%>"><button>Edit</button></a>
+    <a href=""><button>Delete</button></a>
+  </div>
+</div>
