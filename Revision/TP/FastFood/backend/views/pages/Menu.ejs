@@ -1,0 +1,32 @@
+<%username = typeof nick !== 'undefined' ? nick : undefined ; %>
+
+<div id="food-content">
+  <% foods.forEach((food) => { %>
+
+  <div class="card food">
+    <div class="food-card-image">
+      <% if(food.image) { %>
+      <img class="card-img-top" src="<%= food.image %>" />
+      <% } else { %>
+      <img
+        src="/images/cinema5_02.jpg"
+        class="card-img-top"
+        alt="Fond vecteur créé par kenshinstock - fr.freepik.com"
+      />
+      <% } %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= food.name %></h5>
+      <p class="card-price"><%= food.price%></p>
+      <% if (username) { %>
+      <a href="login/menu/update/<%= food._id %>" class="btn btn-dark btn-sm"
+        >More</a
+      >
+      <% }else{ %>
+      <a href="menu/<%= food._id %>" class="btn btn-dark btn-sm">More</a>
+      <%}%>
+    </div>
+  </div>
+
+  <% })%>
+</div>

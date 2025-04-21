@@ -1,0 +1,67 @@
+<div class="scrollable">
+    <form action="/login/update/<%= food.id %>" method="post" name="addfoodForm" enctype="multipart/form-data" style="width: 80%">
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input id="name" name="name" class="form-control" autofocus
+                   value="<%= food.name %>"
+            />
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input id="price" name="price" class="form-control" autofocus
+                   value="<%= food.price %>"
+            />
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <input id="category" name="category" class="form-control" autofocus
+                   value="<%= food.category %>"
+            />
+            <!--        <div id="titleHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+        </div>
+        <div class="mb-3">
+            <label for="description" class="col-form-label col-auto">description</label>
+            <textarea id="description" name="description" class="form-control" rows="8"><%= food.description %></textarea>
+            <!--        <div id="titleHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label" style="display: flex ; flex-direction: column ; justify-content: center">
+                <div style="margin-bottom: 10px">Affiche</div>
+                <div class="card" id="preview">
+                    <img id="preview-image" src="<%= food.image %>"/>
+                </div>
+            </label>
+            <input class="form-control" type="file" id="image" name="image" accept="image/png, image/jpeg">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" id="submit-button">Save</button>
+            <a href="/foods" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        const submitButton = document.getElementById("submit-button") ;
+        const preview = document.getElementById("preview-image") ;
+
+        const reader = new FileReader() ;
+        reader.onload = (e)=>{
+            preview.src = reader.result ;
+        }
+
+        const fileInput = document.getElementById("image") ;
+        fileInput.addEventListener('change', ()=>{
+            let file = fileInput.files[0] ;
+
+            if(file && file.type.split('/')[0] === "image"){
+                reader.readAsDataURL(fileInput.files[0])
+                submitButton.disabled = false ;
+            }else{
+                submitButton.disabled = true ;
+                preview.src = "" ;
+            }
+
+        })
+
+    })
+</script>
